@@ -7,7 +7,6 @@ class Solution {
 
         for (int i = 0; i < arr.length - 2; i++) {
 
-            // Skip duplicate first elements
             if (i > 0 && arr[i] == arr[i - 1]) {
                 continue;
             }
@@ -28,12 +27,10 @@ class Solution {
 
                     result.add(temp);
 
-                    // Skip duplicate left values
                     while (left < right && arr[left] == arr[left + 1]) {
                         left++;
                     }
 
-                    // Skip duplicate right values
                     while (left < right && arr[right] == arr[right - 1]) {
                         right--;
                     }
